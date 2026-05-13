@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC1D0EA82FB1F951009B74F2 /* RemoteBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D0EA72FB1F92F009B74F2 /* RemoteBookRepository.swift */; };
+		DC1D0EAA2FB1F99A009B74F2 /* GATTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D0EA92FB1F998009B74F2 /* GATTConstants.swift */; };
+		DC1D0EAD2FB20199009B74F2 /* BLEDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D0EAC2FB20188009B74F2 /* BLEDecoder.swift */; };
+		DC6422662FB431B3004690D5 /* BLESensorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6422652FB431A4004690D5 /* BLESensorRepository.swift */; };
+		DC6422682FB43284004690D5 /* BLEScanRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6422672FB43261004690D5 /* BLEScanRepoImpl.swift */; };
+		DC64226A2FB4490C004690D5 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6422692FB44904004690D5 /* ScanViewModel.swift */; };
+		DC64226C2FB44D30004690D5 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64226B2FB44D2D004690D5 /* ScanView.swift */; };
+		DC71DF7E2FAD9B25006AB3D2 /* BookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC71DF7D2FAD9B19006AB3D2 /* BookImageView.swift */; };
+		DC9376362FACA8CE0002B0E6 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9376352FACA4C40002B0E6 /* BookView.swift */; };
+		DC9376392FACB1570002B0E6 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9376342FAC9E210002B0E6 /* BookViewModel.swift */; };
+		DC93763A2FACB1780002B0E6 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9376332FAC97CC0002B0E6 /* BookRepository.swift */; };
+		DC93763B2FACB1C90002B0E6 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A20FE2FAC8A050005DCDF /* Book.swift */; };
+		DC93763C2FACB1E10002B0E6 /* BookDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A21002FAC8C510005DCDF /* BookDTO.swift */; };
+		DC93763D2FACB1FD0002B0E6 /* BookMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A21012FAC8EDE0005DCDF /* BookMapper.swift */; };
+		DC93763E2FACB2060002B0E6 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A21032FAC90610005DCDF /* APIEndpoint.swift */; };
+		DC98D2362FB3142200AB4541 /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98D2352FB3141000AB4541 /* BLECentralManager.swift */; };
+		DC98D2382FB3187500AB4541 /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98D2372FB3186A00AB4541 /* ConnectionState.swift */; };
+		DC98D23A2FB34DCF00AB4541 /* BLEPeripheralConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98D2392FB34DC200AB4541 /* BLEPeripheralConnection.swift */; };
+		DC98D23C2FB3516200AB4541 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98D23B2FB3515800AB4541 /* SensorData.swift */; };
+		DC98D23E2FB351BB00AB4541 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98D23D2FB351B600AB4541 /* DeviceInfo.swift */; };
+		DC98D2402FB3524A00AB4541 /* BLEDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98D23F2FB3524400AB4541 /* BLEDevice.swift */; };
+		DC98D2422FB3539100AB4541 /* BLEScanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98D2412FB3531D00AB4541 /* BLEScanRepository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC1D0EA72FB1F92F009B74F2 /* RemoteBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBookRepository.swift; sourceTree = "<group>"; };
+		DC1D0EA92FB1F998009B74F2 /* GATTConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GATTConstants.swift; sourceTree = "<group>"; };
+		DC1D0EAC2FB20188009B74F2 /* BLEDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDecoder.swift; sourceTree = "<group>"; };
+		DC6422652FB431A4004690D5 /* BLESensorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESensorRepository.swift; sourceTree = "<group>"; };
+		DC6422672FB43261004690D5 /* BLEScanRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEScanRepoImpl.swift; sourceTree = "<group>"; };
+		DC6422692FB44904004690D5 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
+		DC64226B2FB44D2D004690D5 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		DC71DF7D2FAD9B19006AB3D2 /* BookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageView.swift; sourceTree = "<group>"; };
+		DC8A20EB2FAC87CD0005DCDF /* harry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = harry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8A20FE2FAC8A050005DCDF /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		DC8A21002FAC8C510005DCDF /* BookDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDTO.swift; sourceTree = "<group>"; };
+		DC8A21012FAC8EDE0005DCDF /* BookMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMapper.swift; sourceTree = "<group>"; };
+		DC8A21032FAC90610005DCDF /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		DC9376332FAC97CC0002B0E6 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
+		DC9376342FAC9E210002B0E6 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		DC9376352FACA4C40002B0E6 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		DC98D2352FB3141000AB4541 /* BLECentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralManager.swift; sourceTree = "<group>"; };
+		DC98D2372FB3186A00AB4541 /* ConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionState.swift; sourceTree = "<group>"; };
+		DC98D2392FB34DC200AB4541 /* BLEPeripheralConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheralConnection.swift; sourceTree = "<group>"; };
+		DC98D23B2FB3515800AB4541 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
+		DC98D23D2FB351B600AB4541 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		DC98D23F2FB3524400AB4541 /* BLEDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEDevice.swift; sourceTree = "<group>"; };
+		DC98D2412FB3531D00AB4541 /* BLEScanRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEScanRepository.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DC8A20ED2FAC87CD0005DCDF /* harry */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = harry;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC8A20E82FAC87CD0005DCDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC1D0E9D2FB1F2FD009B74F2 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		DC1D0EA42FB1F813009B74F2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DC1D0EAB2FB1F9A9009B74F2 /* BLE */,
+				DC1D0EA62FB1F908009B74F2 /* Repositories */,
+				DC8A20FC2FAC89420005DCDF /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DC1D0EA52FB1F81B009B74F2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A20FB2FAC88250005DCDF /* Repository */,
+				DC8A20FD2FAC89770005DCDF /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DC1D0EA62FB1F908009B74F2 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				DC6422672FB43261004690D5 /* BLEScanRepoImpl.swift */,
+				DC1D0EA72FB1F92F009B74F2 /* RemoteBookRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DC1D0EAB2FB1F9A9009B74F2 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				DC98D2392FB34DC200AB4541 /* BLEPeripheralConnection.swift */,
+				DC98D2352FB3141000AB4541 /* BLECentralManager.swift */,
+				DC1D0EAC2FB20188009B74F2 /* BLEDecoder.swift */,
+				DC1D0EA92FB1F998009B74F2 /* GATTConstants.swift */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
+		DC71DF7C2FAD9B0A006AB3D2 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				DC71DF7D2FAD9B19006AB3D2 /* BookImageView.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		DC8A20E22FAC87CD0005DCDF = {
+			isa = PBXGroup;
+			children = (
+				DC1D0EA42FB1F813009B74F2 /* Data */,
+				DC1D0E9D2FB1F2FD009B74F2 /* doc */,
+				DC8A20FA2FAC88110005DCDF /* Views */,
+				DC8A20F92FAC87EE0005DCDF /* ViewModels */,
+				DC8A20ED2FAC87CD0005DCDF /* harry */,
+				DC8A20EC2FAC87CD0005DCDF /* Products */,
+				DC1D0EA52FB1F81B009B74F2 /* Domain */,
+			);
+			sourceTree = "<group>";
+		};
+		DC8A20EC2FAC87CD0005DCDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A20EB2FAC87CD0005DCDF /* harry.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC8A20F92FAC87EE0005DCDF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DC6422692FB44904004690D5 /* ScanViewModel.swift */,
+				DC9376342FAC9E210002B0E6 /* BookViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DC8A20FA2FAC88110005DCDF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC64226B2FB44D2D004690D5 /* ScanView.swift */,
+				DC71DF7C2FAD9B0A006AB3D2 /* components */,
+				DC9376352FACA4C40002B0E6 /* BookView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC8A20FB2FAC88250005DCDF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DC6422652FB431A4004690D5 /* BLESensorRepository.swift */,
+				DC98D2412FB3531D00AB4541 /* BLEScanRepository.swift */,
+				DC9376332FAC97CC0002B0E6 /* BookRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DC8A20FC2FAC89420005DCDF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A21032FAC90610005DCDF /* APIEndpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DC8A20FD2FAC89770005DCDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC98D23F2FB3524400AB4541 /* BLEDevice.swift */,
+				DC98D23D2FB351B600AB4541 /* DeviceInfo.swift */,
+				DC98D23B2FB3515800AB4541 /* SensorData.swift */,
+				DC98D2372FB3186A00AB4541 /* ConnectionState.swift */,
+				DC8A20FF2FAC8C3A0005DCDF /* DTO */,
+				DC8A20FE2FAC8A050005DCDF /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DC8A20FF2FAC8C3A0005DCDF /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				DC8A21012FAC8EDE0005DCDF /* BookMapper.swift */,
+				DC8A21002FAC8C510005DCDF /* BookDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC8A20EA2FAC87CD0005DCDF /* harry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8A20F62FAC87CE0005DCDF /* Build configuration list for PBXNativeTarget "harry" */;
+			buildPhases = (
+				DC8A20E72FAC87CD0005DCDF /* Sources */,
+				DC8A20E82FAC87CD0005DCDF /* Frameworks */,
+				DC8A20E92FAC87CD0005DCDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DC8A20ED2FAC87CD0005DCDF /* harry */,
+			);
+			name = harry;
+			packageProductDependencies = (
+			);
+			productName = harry;
+			productReference = DC8A20EB2FAC87CD0005DCDF /* harry.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC8A20E32FAC87CD0005DCDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					DC8A20EA2FAC87CD0005DCDF = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = DC8A20E62FAC87CD0005DCDF /* Build configuration list for PBXProject "harry" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC8A20E22FAC87CD0005DCDF;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DC8A20EC2FAC87CD0005DCDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC8A20EA2FAC87CD0005DCDF /* harry */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC8A20E92FAC87CD0005DCDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC8A20E72FAC87CD0005DCDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC93763C2FACB1E10002B0E6 /* BookDTO.swift in Sources */,
+				DC71DF7E2FAD9B25006AB3D2 /* BookImageView.swift in Sources */,
+				DC1D0EAD2FB20199009B74F2 /* BLEDecoder.swift in Sources */,
+				DC98D23C2FB3516200AB4541 /* SensorData.swift in Sources */,
+				DC64226A2FB4490C004690D5 /* ScanViewModel.swift in Sources */,
+				DC6422662FB431B3004690D5 /* BLESensorRepository.swift in Sources */,
+				DC6422682FB43284004690D5 /* BLEScanRepoImpl.swift in Sources */,
+				DC93763E2FACB2060002B0E6 /* APIEndpoint.swift in Sources */,
+				DC9376362FACA8CE0002B0E6 /* BookView.swift in Sources */,
+				DC98D2402FB3524A00AB4541 /* BLEDevice.swift in Sources */,
+				DC1D0EAA2FB1F99A009B74F2 /* GATTConstants.swift in Sources */,
+				DC98D23E2FB351BB00AB4541 /* DeviceInfo.swift in Sources */,
+				DC98D2422FB3539100AB4541 /* BLEScanRepository.swift in Sources */,
+				DC98D23A2FB34DCF00AB4541 /* BLEPeripheralConnection.swift in Sources */,
+				DC1D0EA82FB1F951009B74F2 /* RemoteBookRepository.swift in Sources */,
+				DC64226C2FB44D30004690D5 /* ScanView.swift in Sources */,
+				DC9376392FACB1570002B0E6 /* BookViewModel.swift in Sources */,
+				DC93763D2FACB1FD0002B0E6 /* BookMapper.swift in Sources */,
+				DC98D2382FB3187500AB4541 /* ConnectionState.swift in Sources */,
+				DC93763B2FACB1C90002B0E6 /* Book.swift in Sources */,
+				DC93763A2FACB1780002B0E6 /* BookRepository.swift in Sources */,
+				DC98D2362FB3142200AB4541 /* BLECentralManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DC8A20F42FAC87CE0005DCDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC8A20F52FAC87CE0005DCDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC8A20F72FAC87CE0005DCDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSH3HH39R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app connects to BLE devices.";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.www.harry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC8A20F82FAC87CE0005DCDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MXSH3HH39R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app connects to BLE devices.";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.www.harry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC8A20E62FAC87CD0005DCDF /* Build configuration list for PBXProject "harry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8A20F42FAC87CE0005DCDF /* Debug */,
+				DC8A20F52FAC87CE0005DCDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC8A20F62FAC87CE0005DCDF /* Build configuration list for PBXNativeTarget "harry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8A20F72FAC87CE0005DCDF /* Debug */,
+				DC8A20F82FAC87CE0005DCDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC8A20E32FAC87CD0005DCDF /* Project object */;
+}
