@@ -7,25 +7,22 @@
 import Combine
 import CoreBluetooth
 final class BLEScanRepoImpl: BLEScanRepository{
+    var connections: [UUID : BLEPeripheralConnection] {
+        central.connections
+    }
 
-    
     private let central: BLECentralManager
-    //Set<Subscriptions> which can cancel itself
     private var cancellables = Set<AnyCancellable>()
-    
-    //private CurrentValueSubject is used like oBsevable subject with deafult value in dart
-    private let devicesSubject = CurrentValueSubject<[BLEDevice],Never>([])//default value here is empty list
-    
+
+    private let devicesSubject = CurrentValueSubject<[BLEDevice],Never>([])
+
     var devices : AnyPublisher<[BLEDevice],Never>{
-        
-        //this will prevent form sending data on subscription like using add or send method
         devicesSubject.eraseToAnyPublisher()
     }
-    
+
     init(central: BLECentralManager){
         self.central = central
         bindEvents()
-        
     }
     
     
@@ -39,34 +36,47 @@ final class BLEScanRepoImpl: BLEScanRepository{
         central.connect( device.peripheral)
     }
     
-    private func bindEvents(){
-        
-        central.events.sink{ [weak self] event in
-            guard let self ,
-        case .didDiscoverPeripheral(let peripheral, let rssi) = event
-            else {return}
+    private func bindEvents() {
+        central.events.sink { [weak self] event in
             
-            guard rssi > -60 else {return}
-            
-            let device = BLEDevice(
-                id: peripheral.identifier,
-                name: peripheral.name ?? "Unknown",
-                rssi: rssi,
-                peripheral: peripheral
+            print(event)
+            guard let self else { return }
+            switch event {
+            case .didDiscoverPeripheral(let peripheral, let rssi):
+                guard rssi > -60 else { return }
+                let device = BLEDevice(
+                    id: peripheral.identifier,
+                    name: peripheral.name ?? "Unknown",
+                    rssi: rssi,
+                    peripheral: peripheral,
+                    connected: .idle
+                )
+                var current = devicesSubject.value
+                if !current.contains(where: { $0.id == device.id }) {
+                    current.append(device)
+                    devicesSubject.send(current)
+                }
+
+            case .didConect(let peripheral):
+                var current = devicesSubject.value
+                if let index = current.firstIndex(where: { $0.id == peripheral.identifier }) {
+                    print("device Connected: \(current[index].connected)")
+
+                    current[index] = current[index].with(connected: .connected)
+                    devicesSubject.send(current)
+                }
+
+            case .didDisconnect(let peripheral):
+                var current = devicesSubject.value
+                if let index = current.firstIndex(where: { $0.id == peripheral.identifier }) {
+                    current[index] = current[index].with(connected: .disconnected)
+                    devicesSubject.send(current)
+                }
                 
-            )
-            //reading the list of devices
-            var current = self.devicesSubject.value
-            print(current.count)
-            
-            //checking if the same device exist in list already the skip adding it again
-            if !current.contains(where: {$0.id == device.id}){
-                current.append(device)
-                //send the updated list to devicesSubject
-                self.devicesSubject.send(current)// this will update the [devices]
+            default:
+                break
             }
-        }.store(in: &cancellables)// keeps the Anycancelalble object alive and bind it to class otherwise its lost means subscription will be lost.
-        
+        }.store(in: &cancellables)
     }
     
     

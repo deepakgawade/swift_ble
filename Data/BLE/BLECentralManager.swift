@@ -22,11 +22,12 @@ final class BLECentralManager: NSObject{
 
     let events = PassthroughSubject<BLEEvent,Never>()//like a stream<BlEEvent>
 
-    private(set) var connections: [UUID:BLEPeripheralConnection] = [:]
+    private(set) var connections: [UUID: BLEPeripheralConnection] = [:]
 
     private var central: CBCentralManager!
-    // Holds scan request that arrived before BLE was ready
     private var pendingScan = false
+    // Peripherals the user explicitly disconnected — suppresses auto-reconnect
+    private var intentionalDisconnects = Set<UUID>()
 
 
     override init() {
@@ -47,10 +48,15 @@ final class BLECentralManager: NSObject{
         events.send(.didUpdateConnectionState(.scanning))
     }
     
-    func disconnect(_ peripheral:CBPeripheral){
-        connections[peripheral.identifier]?.disconnect()
-        central.cancelPeripheralConnection(peripheral)//what thid function will do
-        
+    func disconnect(_ peripheral: CBPeripheral) {
+        intentionalDisconnects.insert(peripheral.identifier)
+        connections[peripheral.identifier]?.stopSensorNotifications()
+        central.cancelPeripheralConnection(peripheral)
+    }
+
+    func disconnect(id: UUID) {
+        guard let peripheral = connections[id]?.peripheral else { return }
+        disconnect(peripheral)
     }
     
     func connect(_ peripheral: CBPeripheral){
@@ -73,26 +79,27 @@ extension BLECentralManager: CBCentralManagerDelegate{
     //Here we will receive notification when we connect to a peripheral
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         let connection = BLEPeripheralConnection(peripheral: peripheral)
-        
         connections[peripheral.identifier] = connection
-        
-        events.send(.didUpdateConnectionState(.discoveringServices))
-        connection.discoverServices()
-       
+        events.send(.didConect(peripheral))                          // triggers makeDeviceRepositories in AppDependencies
+        events.send(.didUpdateConnectionState(.connected))
+        //this we can call after use moved to the dashboard screen
+        //connection.discoverServices()
     }
-    //here we will receive the ntification when peripheral is diconnected
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         connections.removeValue(forKey: peripheral.identifier)
         events.send(.didDisconnect(peripheral))
-        
         events.send(.didUpdateConnectionState(.disconnected))
-        
-        //Auto-reconnect
-        DispatchQueue.main.asyncAfter(deadline: .now()+2){
-            self.connect(peripheral)
+
+        guard (intentionalDisconnects.remove(peripheral.identifier) == nil) else {
+            logger.debug("Intentional disconnect for \(peripheral.identifier) — skipping auto-reconnect")
+            events.send(.didUpdateConnectionState(.idle))
+            return
         }
-        
-        
+
+        logger.debug("Unexpected disconnect for \(peripheral.identifier) — reconnecting in 2s")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+           // self.connect(peripheral)
+        }
     }
     //on this call we will recve all the peripheral devices
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {

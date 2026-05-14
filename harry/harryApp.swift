@@ -13,7 +13,10 @@ struct harryApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ScanView(viewModel: dependencies.makeScanViewModel())
+            ScanView(
+                viewModel: dependencies.makeScanViewModel(),
+                makeDashboard: dependencies.makeDashboardViewModel(from:)
+            )
         }
     }
 }

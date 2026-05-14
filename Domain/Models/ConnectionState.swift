@@ -9,6 +9,7 @@ enum ConnectionState{
     case idle
     case scanning
     case connecting
+    case connected
     case discoveringServices
     case ready
     case disconnected

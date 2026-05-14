@@ -8,7 +8,7 @@ import CoreBluetooth
 import Combine
 final class BLEPeripheralConnection: NSObject{
     
-    private var peripheral: CBPeripheral
+    let peripheral: CBPeripheral
     
     let events = PassthroughSubject<BLEEvent, Never>()
     
@@ -26,7 +26,7 @@ final class BLEPeripheralConnection: NSObject{
         peripheral.discoverServices(GATT.allservice)
     }
     
-    func disconnect(){
+    func stopSensorNotifications() {
         write(GATT.Sensor.stopSensor, to: GATT.Sensor.control)
     }
     

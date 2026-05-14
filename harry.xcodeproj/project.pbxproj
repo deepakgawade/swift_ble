@@ -14,6 +14,11 @@
 		DC6422682FB43284004690D5 /* BLEScanRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6422672FB43261004690D5 /* BLEScanRepoImpl.swift */; };
 		DC64226A2FB4490C004690D5 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6422692FB44904004690D5 /* ScanViewModel.swift */; };
 		DC64226C2FB44D30004690D5 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC64226B2FB44D2D004690D5 /* ScanView.swift */; };
+		DC6422732FB47F99004690D5 /* BLESensorRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6422722FB47F8B004690D5 /* BLESensorRepoImpl.swift */; };
+		DC6422752FB4858E004690D5 /* DashBoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6422742FB48581004690D5 /* DashBoardViewModel.swift */; };
+		DC6422772FB48CBF004690D5 /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6422762FB48CAD004690D5 /* DashBoardView.swift */; };
+		DC6ED7F32FB5840F0038FC85 /* connection.md in Resources */ = {isa = PBXBuildFile; fileRef = DC6ED7F12FB5840F0038FC85 /* connection.md */; };
+		DC6ED7F42FB5840F0038FC85 /* GATT-iOS-MVVM-Integration.md in Resources */ = {isa = PBXBuildFile; fileRef = DC6ED7F22FB5840F0038FC85 /* GATT-iOS-MVVM-Integration.md */; };
 		DC71DF7E2FAD9B25006AB3D2 /* BookImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC71DF7D2FAD9B19006AB3D2 /* BookImageView.swift */; };
 		DC9376362FACA8CE0002B0E6 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9376352FACA4C40002B0E6 /* BookView.swift */; };
 		DC9376392FACB1570002B0E6 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9376342FAC9E210002B0E6 /* BookViewModel.swift */; };
@@ -39,6 +44,11 @@
 		DC6422672FB43261004690D5 /* BLEScanRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEScanRepoImpl.swift; sourceTree = "<group>"; };
 		DC6422692FB44904004690D5 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		DC64226B2FB44D2D004690D5 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		DC6422722FB47F8B004690D5 /* BLESensorRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESensorRepoImpl.swift; sourceTree = "<group>"; };
+		DC6422742FB48581004690D5 /* DashBoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewModel.swift; sourceTree = "<group>"; };
+		DC6422762FB48CAD004690D5 /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		DC6ED7F12FB5840F0038FC85 /* connection.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = connection.md; sourceTree = "<group>"; };
+		DC6ED7F22FB5840F0038FC85 /* GATT-iOS-MVVM-Integration.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "GATT-iOS-MVVM-Integration.md"; sourceTree = "<group>"; };
 		DC71DF7D2FAD9B19006AB3D2 /* BookImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookImageView.swift; sourceTree = "<group>"; };
 		DC8A20EB2FAC87CD0005DCDF /* harry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = harry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8A20FE2FAC8A050005DCDF /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -79,6 +89,8 @@
 		DC1D0E9D2FB1F2FD009B74F2 /* doc */ = {
 			isa = PBXGroup;
 			children = (
+				DC6ED7F12FB5840F0038FC85 /* connection.md */,
+				DC6ED7F22FB5840F0038FC85 /* GATT-iOS-MVVM-Integration.md */,
 			);
 			path = doc;
 			sourceTree = "<group>";
@@ -105,6 +117,7 @@
 		DC1D0EA62FB1F908009B74F2 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DC6422722FB47F8B004690D5 /* BLESensorRepoImpl.swift */,
 				DC6422672FB43261004690D5 /* BLEScanRepoImpl.swift */,
 				DC1D0EA72FB1F92F009B74F2 /* RemoteBookRepository.swift */,
 			);
@@ -154,6 +167,7 @@
 		DC8A20F92FAC87EE0005DCDF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DC6422742FB48581004690D5 /* DashBoardViewModel.swift */,
 				DC6422692FB44904004690D5 /* ScanViewModel.swift */,
 				DC9376342FAC9E210002B0E6 /* BookViewModel.swift */,
 			);
@@ -163,6 +177,7 @@
 		DC8A20FA2FAC88110005DCDF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DC6422762FB48CAD004690D5 /* DashBoardView.swift */,
 				DC64226B2FB44D2D004690D5 /* ScanView.swift */,
 				DC71DF7C2FAD9B0A006AB3D2 /* components */,
 				DC9376352FACA4C40002B0E6 /* BookView.swift */,
@@ -274,6 +289,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC6ED7F32FB5840F0038FC85 /* connection.md in Resources */,
+				DC6ED7F42FB5840F0038FC85 /* GATT-iOS-MVVM-Integration.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,9 +316,12 @@
 				DC98D2422FB3539100AB4541 /* BLEScanRepository.swift in Sources */,
 				DC98D23A2FB34DCF00AB4541 /* BLEPeripheralConnection.swift in Sources */,
 				DC1D0EA82FB1F951009B74F2 /* RemoteBookRepository.swift in Sources */,
+				DC6422772FB48CBF004690D5 /* DashBoardView.swift in Sources */,
 				DC64226C2FB44D30004690D5 /* ScanView.swift in Sources */,
+				DC6422752FB4858E004690D5 /* DashBoardViewModel.swift in Sources */,
 				DC9376392FACB1570002B0E6 /* BookViewModel.swift in Sources */,
 				DC93763D2FACB1FD0002B0E6 /* BookMapper.swift in Sources */,
+				DC6422732FB47F99004690D5 /* BLESensorRepoImpl.swift in Sources */,
 				DC98D2382FB3187500AB4541 /* ConnectionState.swift in Sources */,
 				DC93763B2FACB1C90002B0E6 /* Book.swift in Sources */,
 				DC93763A2FACB1780002B0E6 /* BookRepository.swift in Sources */,
