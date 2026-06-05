@@ -38,7 +38,7 @@ struct harryApp: App {
                         }
                        
                     }
-                }
+                }.navigationTitle("Harry Potter App")
             }
          
         }
